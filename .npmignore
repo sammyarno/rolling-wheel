@@ -1,0 +1,30 @@
+# Source files
+src/
+
+# Dependencies
+node_modules/
+
+# Configuration files
+.biomeignore
+.env*
+.gitignore
+.prettierignore
+.prettierrc.json
+biome.json
+postcss.config.js
+tailwind.config.js
+tsconfig*.json
+vite.config.ts
+vitest.config.ts
+rollup.config.js
+
+# Development files
+index.html
+pnpm-lock.yaml
+
+# Tests
+src/tests/
+*.test.*
+
+# Documentation
+README.md

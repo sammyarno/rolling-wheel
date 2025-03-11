@@ -1,0 +1,30 @@
+# Build outputs
+dist/
+build/
+
+# Node modules
+node_modules/
+
+# Coverage directory
+coverage/
+
+# Logs
+logs/
+*.log
+
+# Lock files
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env*
+!.env.example
+
+# Misc
+.DS_Store
+.idea/
+.vscode/
+
+# Type definitions that may contain 'any'
+src/types/
