@@ -7,7 +7,7 @@ import { type ResultType, sizes } from '@/utils/constants';
  *
  * This component creates an animated rolling/slot machine effect that reveals characters one by one.
  */
-export interface IRollingWheelProps {
+export interface RollingWheelProps {
   /**
    * Whether the animation should start automatically when the component mounts or when the result changes.
    * @default true
@@ -36,10 +36,9 @@ export interface IRollingWheelProps {
   onSuccess?: () => void;
 
   /**
-   * Custom render function for the component.
-   * @deprecated Not currently used in the implementation
+   * Custom render function for the component's item.
    */
-  render?: () => ReactNode;
+  render?: (value: string) => ReactNode;
 
   /**
    * The final string to be revealed by the animation.

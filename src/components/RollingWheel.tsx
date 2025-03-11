@@ -12,9 +12,9 @@ import {
 } from '@/utils/constants';
 import { cx } from '@/utils/formatter';
 
-import type { IRollingWheelProps, RollingWheelRef } from './types';
+import type { RollingWheelProps, RollingWheelRef } from './types';
 
-const RollingWheel = forwardRef<RollingWheelRef, IRollingWheelProps>((props, ref) => {
+const RollingWheel = forwardRef<RollingWheelRef, RollingWheelProps>((props, ref) => {
   const {
     className,
     itemClassName = 'w-full',
@@ -110,6 +110,12 @@ const RollingWheel = forwardRef<RollingWheelRef, IRollingWheelProps>((props, ref
     revealTimeouts.forEach((timeout) => window.clearTimeout(timeout));
   }, [rollingIntervals, revealTimeouts]);
 
+  const renderItem = (value: string) => {
+    if (render) return render(value);
+
+    return <span className={sizes[size].fontSize}>{value}</span>;
+  };
+
   useEffect(() => {
     return clearAllTimers;
   }, [clearAllTimers]);
@@ -136,9 +142,9 @@ const RollingWheel = forwardRef<RollingWheelRef, IRollingWheelProps>((props, ref
             key={index}
             className={itemClass}
           >
-            <span className={sizes[size].fontSize}>
-              {revealedResults[index] !== null ? revealedResults[index] : rollingValues[index]}
-            </span>
+            {renderItem(
+              revealedResults[index] !== null ? revealedResults[index] : rollingValues[index]
+            )}
           </span>
         ))}
     </div>
