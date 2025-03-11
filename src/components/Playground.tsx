@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { ResultType, sizes } from '@/utils/constants';
+import { type ResultType, sizes } from '@/utils/constants';
 
 import RollingWheel from './RollingWheel';
 
@@ -113,25 +113,17 @@ const Playground = () => {
             <p>Can I control the start from the container?</p>
             <pre className="p-2 rounded border border-slate-700 bg-slate-400/20">
               <code className="w-full h-full text-sm">
-                // Import the ref interface
-                <br />
-                import type &#123; RollingWheelRef &#125; from 'rolling-wheel';
-                <br />
-                <br />
-                // Create the ref
-                <br />
-                const ref = useRef&lt;RollingWheelRef&gt;(null);
-                <br />
-                <br />
-                // Use it on the component
-                <br />
-                &lt;RollingWheel
-                <br />
-                &nbsp;&nbsp;ref=&#123;ref&#125;
-                <br />
-                &nbsp;&nbsp;&#123;...otherProps&#125;
-                <br />
-                /&gt;
+                {`// Import the ref interface
+import type { RollingWheelRef } from 'rolling-wheel';
+
+// Create the ref
+const ref = useRef<RollingWheelRef>(null);
+
+// Use it on the component
+<RollingWheel
+  ref={ref}
+  {...otherProps}
+/>`}
               </code>
             </pre>
           </div>

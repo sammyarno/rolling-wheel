@@ -40,12 +40,12 @@ const RollingWheel = forwardRef<RollingWheelRef, RollingWheelProps>((props, ref)
     }
 
     return '';
-  }, [resultType]);
+  }, [result, resultType]);
 
-  const [revealedResults, setRevealedResults] = useState<Array<string>>(
+  const [revealedResults, setRevealedResults] = useState<string[]>(
     Array(resultLength).fill(placeholder)
   );
-  const [rollingValues, setRollingValues] = useState<Array<string>>(Array(resultLength).fill(''));
+  const [rollingValues, setRollingValues] = useState<string[]>(Array(resultLength).fill(''));
   const [rollingIntervals, setRollingIntervals] = useState<number[]>([]);
   const [revealTimeouts, setRevealTimeouts] = useState<number[]>([]);
 
@@ -103,7 +103,7 @@ const RollingWheel = forwardRef<RollingWheelRef, RollingWheelProps>((props, ref)
       timeouts.push(timeout);
     }
     setRevealTimeouts(timeouts);
-  }, [result, duration, onStart, onSuccess, getRandomValue, startDelay]);
+  }, [result, resultLength, duration, onStart, onSuccess, getRandomValue, startDelay]);
 
   const clearAllTimers = useCallback(() => {
     rollingIntervals.forEach((interval) => window.clearInterval(interval));
@@ -124,7 +124,7 @@ const RollingWheel = forwardRef<RollingWheelRef, RollingWheelProps>((props, ref)
     if (autoStart) {
       startAnimation();
     }
-  }, [result]);
+  }, [autoStart, startAnimation]);
 
   useImperativeHandle(ref, () => ({
     start: startAnimation,

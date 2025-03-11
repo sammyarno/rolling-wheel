@@ -10,7 +10,7 @@ export const DEFAULT_PLACEHOLDER = 'X';
 export type ResultType = 'DIGIT' | 'TEXT';
 
 export const sizes = {
-  small: { container: '', fontSize: 'text-lg' },
-  medium: { container: '', fontSize: 'text-3xl' },
-  large: { container: '', fontSize: 'text-5xl' },
+	small: { container: '', fontSize: 'text-lg' },
+	medium: { container: '', fontSize: 'text-3xl' },
+	large: { container: '', fontSize: 'text-5xl' },
 };
