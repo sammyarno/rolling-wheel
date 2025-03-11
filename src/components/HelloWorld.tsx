@@ -1,10 +1,10 @@
-import React from 'react';
+import type { FC } from 'react';
 
 interface HelloWorldProps {
   name?: string;
 }
 
-const HelloWorld: React.FC<HelloWorldProps> = ({ name = 'World' }) => {
+const HelloWorld: FC<HelloWorldProps> = ({ name = 'World' }) => {
   return (
     <div className="p-4 bg-blue-100 rounded-lg shadow-md">
       <h1 className="text-2xl font-bold text-blue-700">Hello, {name}!</h1>
