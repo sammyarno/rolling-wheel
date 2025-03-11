@@ -1,6 +1,6 @@
 {
   "name": "rolling-wheel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React component library with TypeScript and Tailwind CSS",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -16,7 +16,10 @@
     "test:watch": "vitest",
     "lint": "biome lint --write ./src",
     "format": "biome format --write ./src",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "build:demo": "BUILD_TYPE=demo vite build",
+    "predeploy": "npm run build:demo",
+    "deploy": "gh-pages -d demo"
   },
   "peerDependencies": {
     "react": "^18.0.0",
@@ -41,6 +44,7 @@
     "autoprefixer": "^10.4.14",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^10.1.1",
+    "gh-pages": "^6.3.0",
     "jsdom": "^21.1.1",
     "postcss": "^8.4.21",
     "prettier": "^3.5.3",

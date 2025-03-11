@@ -2,6 +2,10 @@
 
 A React component library with TypeScript and Tailwind CSS that creates an animated rolling/slot machine effect that reveals characters one by one.
 
+## Demo
+
+Check out the live demo: [Rolling Wheel Demo](https://sammyarno.github.io/rolling-wheel/)
+
 ## Installation
 
 ```bash
