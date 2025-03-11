@@ -1,6 +1,6 @@
-import Playground from '@/components/Playground';
+import RollingWheel from '@/components/RollingWheel';
 
 import './index.css';
 
 // Imports for library
-export default Playground;
+export default RollingWheel;
