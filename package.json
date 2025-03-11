@@ -1,6 +1,6 @@
 {
   "name": "rolling-wheel",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A React component library with TypeScript and Tailwind CSS",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
