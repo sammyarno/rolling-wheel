@@ -1,0 +1,59 @@
+{
+  "name": "rolling-wheel",
+  "version": "0.1.0",
+  "description": "A React component library with TypeScript and Tailwind CSS",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite --host --mode development",
+    "build": "vite build --mode production && tsc --emitDeclarationOnly",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src --ext ts,tsx",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^18.15.11",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@types/testing-library__jest-dom": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitejs/plugin-react": "^3.1.0",
+    "@vitest/expect": "^0.29.8",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.38.0",
+    "jsdom": "^21.1.1",
+    "postcss": "^8.4.21",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rollup": "^3.20.2",
+    "tailwindcss": "^3.3.1",
+    "typescript": "^5.0.4",
+    "vite": "^4.2.1",
+    "vitest": "^3.0.8"
+  },
+  "keywords": [
+    "react",
+    "component-library",
+    "typescript",
+    "tailwindcss"
+  ],
+  "author": "sammyarno",
+  "license": "MIT"
+}
