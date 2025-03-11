@@ -9,4 +9,6 @@ build
 .env
 .env.local
 .env.production
-node_modules
+
+# VSCode settings
+.vscode
