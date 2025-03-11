@@ -1,6 +1,6 @@
 {
   "name": "rolling-wheel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React component library with TypeScript and Tailwind CSS",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "dev": "vite --host --mode development",
-    "build": "vite build --mode production && tsc --emitDeclarationOnly",
+    "build": "vite build && tsc --emitDeclarationOnly",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -60,5 +60,9 @@
     "tailwindcss"
   ],
   "author": "sammyarno",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/sammyarno/rolling-wheel"
+  }
 }
