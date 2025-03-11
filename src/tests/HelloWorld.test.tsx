@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 
-import HelloWorld from '../components/HelloWorld';
+import HelloWorld from '../components/Playground';
 
 describe('HelloWorld Component', () => {
   test('renders with default name', () => {

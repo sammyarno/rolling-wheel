@@ -1,6 +1,6 @@
-import HelloWorld from '@/components/HelloWorld';
+import Playground from '@/components/Playground';
 
 import './index.css';
 
 // Imports for library
-export default HelloWorld;
+export default Playground;
